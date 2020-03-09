@@ -1,0 +1,247 @@
+@font-face {
+  font-family: DaysOne;
+  src: url('DaysOne-Regular.ttf')
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  background: #AAACAF;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 100px 30px 30px 1fr 20px;
+  grid-template-areas:
+    "hero"
+    "nav"
+    "search"
+    "main"
+    "footer";
+  /* width: 100vw; */
+  height: 100%;
+}
+
+#container #hero {
+  grid-area: hero;
+  background-color: #393E46;
+  
+}
+
+#container #nav {
+  grid-area: nav;
+  display: flex;
+  background-color: #AAACAF;
+  justify-content: center;
+  font-family: DaysOne;
+  text-shadow: 2px 2px #393E46;
+
+}
+#nav #search {
+  grid-area: search;
+  font-family: DaysOne;
+  margin: 5px 0 0 10px;
+  
+  
+
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  /* background-color: #CECFD0; */
+  color: #AAACAF;
+
+}
+
+.topnav input[type=text] {
+  border: none;
+  /* margin-top: 8px; */
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+
+
+.topnav input[type=text] {
+  border: 1px solid #ccc;
+}
+
+
+#container #main {
+  grid-area: main;
+  /* background: url(img/black_twill.png); */
+  background: #AAACAF;
+  padding: 1em 0 0 0;
+}
+
+#container #footer {
+  grid-area: footer;
+  background-color: #AAACAF;
+  text-align: center;
+
+}
+
+.float_right {
+  float: right;
+  color: #ff4258;
+  font-family: "Pragati Narrow", "Segoe UI", Arial, Helvetica, Meiryo, sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.0;
+  margin: 0 16px 8px;
+  width: 25%;
+  vertical-align: baseline;
+}
+
+
+#box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CECFD0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+  position: relative;
+  bottom: .5em;
+
+}
+
+#boxlogin {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100%;
+}
+
+.screenshot {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+}
+
+h1 {
+  text-align: center;
+  color: #393E46;
+  text-shadow: #AAACAF 1px 1px;
+  font-family: DaysOne;
+  padding: 0.5em;
+}
+
+aside {
+  font-size: .9rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#border {
+  border-bottom: solid .15em black;
+  margin: 1em;
+}
+
+section {
+  font-family: sans-serif;
+  line-height: 2em;
+  margin: 0 1em;
+  padding: 0 1em;
+}
+
+.content {
+  padding-top: 1em;
+
+}
+
+h2 {
+  padding: 15px;
+}
+
+
+
+.content a:link {
+
+  color: black;
+  text-decoration: none;
+
+}
+
+.content a:visited {
+
+  color: black;
+  text-decoration: none;
+
+}
+
+.content a:hover {
+
+  color: black;
+  text-decoration: underline;
+}
+
+/*Floating Back-To-Top Button*/
+#myBtn {
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  right: 3%;
+  max-width: 50px;
+  font-size: 50px;
+  color: #f2f2f2;
+}
+
+
+#myBtn:hover {
+  color: rgb(75, 76, 78);
+}
+
+@media screen and (min-width: 770px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    grid-template-rows: 250px 30px 1fr 20px;
+    grid-template-areas:
+      "hero hero hero"
+      "nav nav nav"
+      ". main ."
+      "footer footer footer";
+    height: 100%;
+  }
+
+
+  iframe {
+    height: 400px;
+  }
+
+  #logo {
+    width: 250px;
+  }
+}
